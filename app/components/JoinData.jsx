@@ -106,7 +106,7 @@ function JoinData() {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="w-full px-3 py-2 bg-transparent text-white focus:outline-none"
-                  placeholder="Email Address "
+                  placeholder="Email Address"
                 />
               </div>
               {errors.email && <p className="text-red-500 text-sm flex justify-start pl-2">{errors.email}</p>}
