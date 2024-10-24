@@ -101,7 +101,7 @@ body {
   height: 100vh;
 }
 
-.mantibot-txt {
+.gradient-txt {
   background: #0192ff;
   background: linear-gradient(to right, #0192ff 0%, #8e54e9 100%);
   background-clip: text;

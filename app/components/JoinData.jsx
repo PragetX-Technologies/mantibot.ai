@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 import {
   FaLinkedinIn,
@@ -57,6 +58,7 @@ function JoinData() {
 
     if (!hasError) {
       setFormData({ name: "", email: "" });
+      setShowForm(!showForm);
       alert("Thank you for joining the waitlist");
     }
   };
@@ -66,7 +68,7 @@ function JoinData() {
       <div className="text-center p-8 pb-20 pt-40 font-[family-name:ClashGrotesk-Medium]">
         <h1 className="text-[60px]">
           Unlock the future of AI with{" "}
-          <span className="text-[65px] font-[550] mantibot-txt font-[family-name:Astromax-Regular] ">MANTIBOT.AI</span>
+          <span className="text-[65px] font-[550] gradient-txt font-[family-name:Astromax-Regular] ">MANTIBOT.AI</span>
         </h1>
         <h1 className="text-[60px]">Join now and be the first to hear when it&apos;s ready!</h1>
 
@@ -76,7 +78,7 @@ function JoinData() {
             <form
               className="space-y-4"
               onSubmit={(e) => {
-                e.preventDefault();
+                // e.preventDefault();
                 handleSubmit();
               }}
             >
@@ -127,24 +129,24 @@ function JoinData() {
       </div>
 
       <div className="flex justify-center gap-x-4 pb-10">
-        <button color="facebook" type="button">
+        <Link href="https://www.linkedin.com/company/pragetx/" color="linkedin" type="button">
           <FaLinkedinIn className="bg-[#232323] w-12 h-12 p-3 rounded-xl items-center hover:bg-[#0077B5]" />
-        </button>
-        <button color="facebook" type="button">
+        </Link>
+        <Link href="https://x.com/PragetX" color="x" type="button">
           <FaXTwitter className="bg-[#232323] w-12 h-12 p-3 rounded-xl items-center hover:bg-[#505050]" />
-        </button>
-        <button color="facebook" type="button">
+        </Link>
+        <Link href="https://www.instagram.com/pragetx_technologies/" color="instagram" type="button">
           <FaInstagram className="bg-[#232323] w-12 h-12 p-3 rounded-xl items-center hover:bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]" />
-        </button>
-        <button color="facebook" type="button">
+        </Link>
+        <Link href="https://www.facebook.com/PragetX" color="facebook" type="button">
           <FaFacebookF className="bg-[#232323] w-12 h-12 p-3 rounded-xl items-center hover:bg-[#1877F2]" />
-        </button>
-        <button color="facebook" type="button">
+        </Link>
+        <Link href="https://www.youtube.com/channel/UC4ju5EX2B5ptpTSIHOZbGLw" color="youtube" type="button">
           <FaYoutube className="bg-[#232323] w-12 h-12 p-3 rounded-xl items-center hover:bg-[#FF0000]" />
-        </button>
-        <button color="facebook" type="button">
+        </Link>
+        <Link href="https://www.quora.com/profile/PragetX" color="quora" type="button">
           <FaQuora className="bg-[#232323] w-12 h-12 p-3 rounded-xl items-center hover:bg-[#A82400]" />
-        </button>
+        </Link>
       </div>
     </div>
   );
